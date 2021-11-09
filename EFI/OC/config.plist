@@ -1395,9 +1395,11 @@
 				<key>boot-args</key>
 				<string>alcid=3 agdpmod=pikera</string>
 				<key>csr-active-config</key>
-				<data>ZwAAAA==</data>
+				<data>AAAAAA==</data>
 				<key>run-efi-updater</key>
 				<string>No</string>
+				<key>shikigva</key>
+				<string>40</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
