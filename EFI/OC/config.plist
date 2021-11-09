@@ -18,22 +18,6 @@
 				<key>Comment</key>
 				<string></string>
 				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-NVME.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-BRG0.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
 				<false/>
 				<key>Path</key>
 				<string>SSDT-GIGABYTE-X570-NO-BT.aml</string>
@@ -208,7 +192,7 @@
 			<key>RebuildAppleMemoryMap</key>
 			<true/>
 			<key>ResizeAppleGpuBars</key>
-			<integer>-1</integer>
+			<integer>0</integer>
 			<key>SetupVirtualMap</key>
 			<false/>
 			<key>SignalAppleOS</key>
@@ -480,6 +464,60 @@
 		</dict>
 		<key>Force</key>
 		<array/>
+		<key>Quirks</key>
+		<dict>
+			<key>AppleCpuPmCfgLock</key>
+			<false/>
+			<key>AppleXcpmCfgLock</key>
+			<false/>
+			<key>AppleXcpmExtraMsrs</key>
+			<false/>
+			<key>AppleXcpmForceBoost</key>
+			<false/>
+			<key>CustomSMBIOSGuid</key>
+			<false/>
+			<key>DisableIoMapper</key>
+			<false/>
+			<key>DisableLinkeditJettison</key>
+			<true/>
+			<key>DisableRtcChecksum</key>
+			<false/>
+			<key>ExtendBTFeatureFlags</key>
+			<false/>
+			<key>ExternalDiskIcons</key>
+			<true/>
+			<key>ForceSecureBootScheme</key>
+			<false/>
+			<key>IncreasePciBarSize</key>
+			<false/>
+			<key>LapicKernelPanic</key>
+			<false/>
+			<key>LegacyCommpage</key>
+			<false/>
+			<key>PanicNoKextDump</key>
+			<true/>
+			<key>PowerTimeoutKernelPanic</key>
+			<true/>
+			<key>ProvideCurrentCpuInfo</key>
+			<true/>
+			<key>SetApfsTrimTimeout</key>
+			<integer>-1</integer>
+			<key>ThirdPartyDrives</key>
+			<false/>
+			<key>XhciPortLimit</key>
+			<false/>
+		</dict>
+		<key>Scheme</key>
+		<dict>
+			<key>CustomKernel</key>
+			<false/>
+			<key>FuzzyMatch</key>
+			<true/>
+			<key>KernelArch</key>
+			<string>x86_64</string>
+			<key>KernelCache</key>
+			<string>Auto</string>
+		</dict>
 		<key>Patch</key>
 		<array>
 			<dict>
@@ -728,37 +766,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>algrey - _cpuid_set_generic_info - Disable check to allow leaf7 - 10.13/10.14/10.15/11.0/12.0</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>ADoPgg==</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string>21.99.99</string>
-				<key>MinKernel</key>
-				<string>17.0.0</string>
-				<key>Replace</key>
-				<data>AAAPgg==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>algrey - _cpuid_set_info - GenuineIntel to AuthenticAMD - 10.13/10.14/10.15/11.0/12.0</string>
+				<string>algrey - _cpuid_set_info - GenuineIntel to AuthenticAMD - 10.13/10.14/10.15/11.0</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -818,7 +826,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>algrey - _cpuid_set_cpufamily - Force CPUFAMILY_INTEL_PENRYN - 10.13/10.14/10.15/11.3</string>
+				<string>algrey - _cpuid_set_cpufamily - Force CPUFAMILY_INTEL_PENRYN - 10.13/10.14/10.15/11.2</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -846,7 +854,7 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>Base</key>
-				<string>_cpuid_set_info</string>
+				<string>_cpuid_set_info </string>
 				<key>Comment</key>
 				<string>algrey - _cpuid_set_cpufamily - Force CPUFAMILY_INTEL_PENRYN - 11.3 + / 12.0</string>
 				<key>Count</key>
@@ -906,39 +914,9 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>Base</key>
-				<string>_lapic_init</string>
+				<string></string>
 				<key>Comment</key>
-				<string>algrey - Remove version check and panic - 10.13/10.14</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>JfwAAACD+BM=</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string>18.99.99</string>
-				<key>MinKernel</key>
-				<string>17.0.0</string>
-				<key>Replace</key>
-				<data>JfAAAADrI5A=</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_lapic_init</string>
-				<key>Comment</key>
-				<string>XLNC - Remove version check and panic - 10.15/11.0/12.0</string>
+				<string>algrey/XLNC - Remove version check and panic</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -954,69 +932,9 @@
 				<key>MaxKernel</key>
 				<string>21.99.99</string>
 				<key>MinKernel</key>
-				<string>19.0.0</string>
+				<string>17.0.0</string>
 				<key>Replace</key>
 				<data>JfwAAAAPHwA=</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_lapic_interrupt</string>
-				<key>Comment</key>
-				<string>algrey - Skip checks and prevent panic - 10.15/11.0/12.0</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>gz0AAAAAAHQN</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>//8AAAD/////</data>
-				<key>MaxKernel</key>
-				<string>21.99.99</string>
-				<key>MinKernel</key>
-				<string>19.0.0</string>
-				<key>Replace</key>
-				<data>6ygPH4AAAAAA</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_lapic_interrupt</string>
-				<key>Comment</key>
-				<string>algrey - Skip checks and prevent panic - 10.13/10.14</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>gz0AAAAAAHQK</data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>250</integer>
-				<key>Mask</key>
-				<data>//8AAAD/////</data>
-				<key>MaxKernel</key>
-				<string>18.99.99</string>
-				<key>MinKernel</key>
-				<string>17.0.0</string>
-				<key>Replace</key>
-				<data>60gPH4AAAAAA</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -1032,7 +950,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>icCB4v//AP+BygAAAQC5dwIAAA==</data>
 				<key>Identifier</key>
@@ -1062,7 +980,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>icCB4v//AP+BygAAAQC5dwIAAA==</data>
 				<key>Identifier</key>
@@ -1083,60 +1001,6 @@
 				<integer>0</integer>
 			</dict>
 		</array>
-		<key>Quirks</key>
-		<dict>
-			<key>AppleCpuPmCfgLock</key>
-			<false/>
-			<key>AppleXcpmCfgLock</key>
-			<false/>
-			<key>AppleXcpmExtraMsrs</key>
-			<false/>
-			<key>AppleXcpmForceBoost</key>
-			<false/>
-			<key>CustomSMBIOSGuid</key>
-			<true/>
-			<key>DisableIoMapper</key>
-			<true/>
-			<key>DisableLinkeditJettison</key>
-			<true/>
-			<key>DisableRtcChecksum</key>
-			<false/>
-			<key>ExtendBTFeatureFlags</key>
-			<false/>
-			<key>ExternalDiskIcons</key>
-			<true/>
-			<key>ForceSecureBootScheme</key>
-			<false/>
-			<key>IncreasePciBarSize</key>
-			<false/>
-			<key>LapicKernelPanic</key>
-			<false/>
-			<key>LegacyCommpage</key>
-			<false/>
-			<key>PanicNoKextDump</key>
-			<true/>
-			<key>PowerTimeoutKernelPanic</key>
-			<true/>
-			<key>ProvideCurrentCpuInfo</key>
-			<true/>
-			<key>SetApfsTrimTimeout</key>
-			<integer>-1</integer>
-			<key>ThirdPartyDrives</key>
-			<false/>
-			<key>XhciPortLimit</key>
-			<false/>
-		</dict>
-		<key>Scheme</key>
-		<dict>
-			<key>CustomKernel</key>
-			<false/>
-			<key>FuzzyMatch</key>
-			<true/>
-			<key>KernelArch</key>
-			<string>x86_64</string>
-			<key>KernelCache</key>
-			<string>Auto</string>
-		</dict>
 	</dict>
 	<key>Misc</key>
 	<dict>
@@ -1176,7 +1040,7 @@
 			<key>AppleDebug</key>
 			<false/>
 			<key>ApplePanic</key>
-			<false/>
+			<true/>
 			<key>DisableWatchDog</key>
 			<false/>
 			<key>DisplayDelay</key>
