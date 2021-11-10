@@ -17,3 +17,14 @@ Hackintosh on Ryzen, hardware used:
 You'll need to go into config.plist and generate your own SMBios using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
 
 Really only attempt to run this if you have the **exact same hardware**, particularly the motherboard. If you don't have a 12 core Ryzen CPU you'll need to change the number of cores in the AMD Vanilla patch, google how to do that.
+
+
+### Credits
+This build was done with the help of the following generous users from the [AMD Hackintosh Discord](https://discord.gg/EfCYAJW)
+
+* @neon-sunset
+* @ben
+* @Visual
+* @alyxxxandra
+
+Great bunch of people!
