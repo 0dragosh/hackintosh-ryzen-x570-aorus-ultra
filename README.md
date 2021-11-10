@@ -10,6 +10,8 @@ Hackintosh on Ryzen, hardware used:
 
 * Fenvi T919 for BT/WIFI
 
+* ASUS XG-C100C 10G NIC with patch for Monterey
+
 # READ THIS!
 
 You'll need to go into config.plist and generate your own SMBios using [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
